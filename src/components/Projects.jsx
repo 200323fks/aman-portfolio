@@ -6,24 +6,28 @@ export default function Projects() {
             title: "Trivial – Cross-Platform Quiz Game",
             desc: "Developed a scalable quiz game supporting Android & WebGL builds. Implemented dynamic question loading, real-time score system, UI optimization and ensured smooth cross-device compatibility.",
             tech: ["Unity", "C#", "WebGL", "Android"],
+            video: "https://drive.google.com/file/d/1TT2F1xjGdGBDCAsIxBFoaGEE5tOm1iXG/preview",
             link: null
         },
         {
             title: "Echelon Tactics – Multiplayer AR Card Game",
             desc: "Built a real-time multiplayer AR strategy game using Photon networking. Designed synchronized gameplay systems, room management logic, and optimized AR tracking for stable performance.",
             tech: ["Unity", "AR Foundation", "Photon", "C#"],
+            video: null,
             link: null
         },
         {
             title: "Strategy Prediction Game (Multiplayer + AI)",
             desc: "Created a competitive multiplayer game integrating AI-based prediction logic. Implemented matchmaking, real-time synchronization, backend API integration and gameplay performance tuning.",
             tech: ["Unity", "C#", "Photon", "REST API"],
+            video: null,
             link: null
         },
         {
             title: "The Last Survivor – Roblox Multiplayer Zombie Game",
             desc: "Designed and developed a multiplayer survival shooter in Roblox featuring wave-based enemy spawning, damage systems, scalable game logic, and optimized real-time multiplayer gameplay mechanics.",
             tech: ["Roblox Studio", "Lua", "Multiplayer Systems", "Game Logic"],
+            video: null,
             link: "https://www.roblox.com/games/91761444447467/The-Last-Survivor"
         }
     ]
@@ -70,6 +74,19 @@ export default function Projects() {
                                 </span>
                             ))}
                         </div>
+
+                        {/* Embedded Video */}
+                        {project.video && (
+                            <div className="mb-4 rounded-lg overflow-hidden border border-gray-800">
+                                <iframe
+                                    src={project.video}
+                                    width="100%"
+                                    height="250"
+                                    allow="autoplay"
+                                    className="rounded-lg"
+                                ></iframe>
+                            </div>
+                        )}
 
                         {/* Live Link Button */}
                         {project.link && (
