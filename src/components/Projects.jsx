@@ -6,7 +6,7 @@ export default function Projects() {
             title: "Trivial – Cross-Platform Quiz Game",
             desc: "Developed a scalable quiz game supporting Android & WebGL builds. Implemented dynamic question loading, real-time score system, UI optimization and ensured smooth cross-device compatibility.",
             tech: ["Unity", "C#", "WebGL", "Android"],
-            video: "https://drive.google.com/file/d/1TT2F1xjGdGBDCAsIxBFoaGEE5tOm1iXG/preview",
+            video: "https://drive.google.com/file/d/1TT2F1xjGdGBDCAsIxBFoaGEE5tOm1iXG/view",
             link: null
         },
         {
@@ -63,7 +63,7 @@ export default function Projects() {
                         </p>
 
                         {/* Tech Stack Tags */}
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <div className="flex flex-wrap gap-2 mb-6">
                             {project.tech.map((tech, index) => (
                                 <span
                                     key={index}
@@ -75,31 +75,36 @@ export default function Projects() {
                             ))}
                         </div>
 
-                        {/* Embedded Video */}
-                        {project.video && (
-                            <div className="mb-4 rounded-lg overflow-hidden border border-gray-800">
-                                <iframe
-                                    src={project.video}
-                                    width="100%"
-                                    height="250"
-                                    allow="autoplay"
-                                    className="rounded-lg"
-                                ></iframe>
-                            </div>
-                        )}
+                        {/* Buttons Section */}
+                        <div className="flex gap-4 flex-wrap">
 
-                        {/* Live Link Button */}
-                        {project.link && (
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block bg-blue-600 hover:bg-blue-700 
-                                px-5 py-2 rounded-lg text-sm font-semibold transition"
-                            >
-                                ▶ Play Game
-                            </a>
-                        )}
+                            {/* Video Button */}
+                            {project.video && (
+                                <a
+                                    href={project.video}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block bg-blue-600 hover:bg-blue-700 
+                                    px-5 py-2 rounded-lg text-sm font-semibold transition"
+                                >
+                                    ▶ Watch Demo
+                                </a>
+                            )}
+
+                            {/* Live Game Button */}
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block bg-green-600 hover:bg-green-700 
+                                    px-5 py-2 rounded-lg text-sm font-semibold transition"
+                                >
+                                    ▶ Play Game
+                                </a>
+                            )}
+
+                        </div>
                     </div>
                 ))}
             </div>
