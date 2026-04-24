@@ -4,8 +4,8 @@ export default function Projects() {
     const projects = [
         {
             title: "Trivial – Cross-Platform Quiz Game",
-            desc: "Developed a scalable quiz game supporting Android & WebGL builds. Implemented dynamic question loading, real-time score system, UI optimization and ensured smooth cross-device compatibility.",
-            tech: ["Unity", "C#", "WebGL", "Android"],
+            desc: "Developed a scalable quiz game supporting Android, IOS & WebGL builds. Implemented dynamic question loading, real-time score system, UI optimization and ensured smooth cross-device compatibility.",
+            tech: ["Unity", "C#", "WebGL", "Android", "IOS"],
             video: "https://drive.google.com/file/d/1TT2F1xjGdGBDCAsIxBFoaGEE5tOm1iXG/view",
             link: null
         },
@@ -13,7 +13,7 @@ export default function Projects() {
             title: "Echelon Tactics – Multiplayer AR Card Game",
             desc: "Built a real-time multiplayer AR strategy game using Photon networking. Designed synchronized gameplay systems, room management logic, and optimized AR tracking for stable performance.",
             tech: ["Unity", "AR Foundation", "Photon", "C#"],
-            video: null,
+            video: "https://drive.google.com/file/d/1RZq1YbhvoWqY4LJuOrqSufr5T--R1n1K/view",
             link: null
         },
         {
@@ -62,7 +62,6 @@ export default function Projects() {
                             {project.desc}
                         </p>
 
-                        {/* Tech Stack Tags */}
                         <div className="flex flex-wrap gap-2 mb-6">
                             {project.tech.map((tech, index) => (
                                 <span
@@ -75,10 +74,8 @@ export default function Projects() {
                             ))}
                         </div>
 
-                        {/* Buttons Section */}
                         <div className="flex gap-4 flex-wrap">
 
-                            {/* Video Button */}
                             {project.video && (
                                 <a
                                     href={project.video}
@@ -91,7 +88,6 @@ export default function Projects() {
                                 </a>
                             )}
 
-                            {/* Live Game Button */}
                             {project.link && (
                                 <a
                                     href={project.link}
