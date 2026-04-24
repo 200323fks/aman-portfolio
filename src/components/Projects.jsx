@@ -1,27 +1,30 @@
 import { motion as Motion } from "framer-motion"
 
 export default function Projects() {
-
     const projects = [
         {
             title: "Trivial – Cross-Platform Quiz Game",
-            desc: "Developed a scalable quiz-based game deployed on Android and WebGL. Implemented dynamic question loading system, score persistence, optimized UI responsiveness, and reduced load time through performance tuning.",
-            tech: ["Unity", "C#", "WebGL", "Android", "UI Optimization"]
+            desc: "Developed a scalable quiz game supporting Android & WebGL builds. Implemented dynamic question loading, real-time score system, UI optimization and ensured smooth cross-device compatibility.",
+            tech: ["Unity", "C#", "WebGL", "Android"],
+            link: null
         },
         {
             title: "Echelon Tactics – Multiplayer AR Card Game",
-            desc: "Engineered a real-time multiplayer AR strategy game using Photon networking and AR Foundation. Built synchronized card mechanics, real-time room management, stable AR object tracking, and optimized gameplay latency.",
-            tech: ["Unity", "C#", "Photon", "AR Foundation", "Android"]
+            desc: "Built a real-time multiplayer AR strategy game using Photon networking. Designed synchronized gameplay systems, room management logic, and optimized AR tracking for stable performance.",
+            tech: ["Unity", "AR Foundation", "Photon", "C#"],
+            link: null
         },
         {
             title: "Strategy Prediction Game (Multiplayer + AI)",
-            desc: "Designed a competitive multiplayer game integrating AI-based decision logic. Implemented matchmaking systems, player synchronization, REST API integration, and improved runtime performance.",
-            tech: ["Unity", "C#", "Photon", "REST API", "Multiplayer"]
+            desc: "Created a competitive multiplayer game integrating AI-based prediction logic. Implemented matchmaking, real-time synchronization, backend API integration and gameplay performance tuning.",
+            tech: ["Unity", "C#", "Photon", "REST API"],
+            link: null
         },
         {
-            title: "Roblox Zombie Survival Game",
-            desc: "Created a multiplayer survival experience featuring wave-based enemy spawning, scalable damage systems, and interactive environments. Optimized server-side performance for smoother gameplay.",
-            tech: ["Roblox Studio", "Lua", "Multiplayer Systems"]
+            title: "The Last Survivor – Roblox Multiplayer Zombie Game",
+            desc: "Designed and developed a multiplayer survival shooter in Roblox featuring wave-based enemy spawning, damage systems, scalable game logic, and optimized real-time multiplayer gameplay mechanics.",
+            tech: ["Roblox Studio", "Lua", "Multiplayer Systems", "Game Logic"],
+            link: "https://www.roblox.com/games/91761444447467/The-Last-Survivor"
         }
     ]
 
@@ -40,36 +43,47 @@ export default function Projects() {
 
             <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
                 {projects.map((project, i) => (
-                    <Motion.div
+                    <div
                         key={i}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
                         className="bg-gray-900 p-8 rounded-xl border border-gray-800 
                         hover:border-blue-500 hover:-translate-y-2 
                         hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] 
                         transition duration-300 text-left"
                     >
-                        <h3 className="text-lg font-semibold text-blue-400 mb-4">
+                        <h3 className="text-lg font-semibold text-blue-400 mb-3">
                             {project.title}
                         </h3>
 
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             {project.desc}
                         </p>
 
-                        <div className="flex flex-wrap gap-2">
+                        {/* Tech Stack Tags */}
+                        <div className="flex flex-wrap gap-2 mb-4">
                             {project.tech.map((tech, index) => (
                                 <span
                                     key={index}
-                                    className="text-xs bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full"
+                                    className="text-xs bg-black border border-blue-500 
+                                    text-blue-400 px-3 py-1 rounded-full"
                                 >
                                     {tech}
                                 </span>
                             ))}
                         </div>
-                    </Motion.div>
+
+                        {/* Live Link Button */}
+                        {project.link && (
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-blue-600 hover:bg-blue-700 
+                                px-5 py-2 rounded-lg text-sm font-semibold transition"
+                            >
+                                ▶ Play Game
+                            </a>
+                        )}
+                    </div>
                 ))}
             </div>
         </Motion.section>
