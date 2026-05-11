@@ -1,4 +1,4 @@
-import { motion as Motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function Skills() {
 
@@ -27,7 +27,7 @@ export default function Skills() {
     }
 
     return (
-        <Motion.section
+        <motion.section
             id="skills"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,6 +74,6 @@ export default function Skills() {
                     </div>
                 ))}
             </div>
-        </Motion.section>
+        </motion.section>
     )
 }
