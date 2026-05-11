@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion as Motion } from "framer-motion"
 
 export default function Skills() {
 
@@ -13,7 +13,7 @@ export default function Skills() {
             { name: "Git & GitHub", level: 80 },
             { name: "Visual Studio", level: 85 },
             { name: "Postman", level: 70 },
-            { name: "Blender (Basic)", level: 55 }
+            { name: "Figma (Basic)", level: 55 }
         ],
         Technologies: [
             { name: "Unity 2D / 3D", level: 92 },
@@ -27,7 +27,7 @@ export default function Skills() {
     }
 
     return (
-        <motion.section
+        <Motion.section
             id="skills"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,6 +74,6 @@ export default function Skills() {
                     </div>
                 ))}
             </div>
-        </motion.section>
+        </Motion.section>
     )
 }
